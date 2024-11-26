@@ -1,68 +1,408 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+@import "bootstrap/dist/css/bootstrap.css";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body,
+html {
+  font-family: "Raleway" !important;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: black;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+.cus-dflex {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container {
+  max-width: 1650px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.navbar {
+  position: relative;
+  padding: 25px 5px;
+}
+.navbar::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.438;
+}
+.navbar .links {
+  width: 100%;
+  justify-content: center;
+}
+.navbar .links a {
+  font-size: 19px;
+  margin-right: 35px;
+  font-weight: 600;
+}
+.navbar .links .active {
+  background-color: black;
+  color: white;
+}
+.navbar .search-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.navbar .form-control {
+  width: 285px;
+  font-size: 15px;
+  border-radius: 0px;
+  border: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.navbar .icon {
+  font-size: 27px;
+  padding: 0;
+}
+.navbar .profile-icon {
+  background-color: #db4444;
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 27px;
+  margin-top: 8px;
+}
+.navbar .nav-link {
+  padding: 0;
+}
+.navbar .nav-link::after {
+  display: none;
+}
+.navbar .dropdown-menu {
+  position: absolute;
+  left: -153px;
+  padding: 10px;
+  background-color: rgba(63, 57, 69, 0.969);
+}
+.navbar .dropdown-menu .dropdown-item {
+  color: white;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  color: #000;
+}
+@media (max-width: 1200px) {
+  .navbar .links a {
+    font-size: 17px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .links a {
+    margin: 10px 0;
+  }
+  .navbar .form-control {
+    width: 100%;
+  }
+  .navbar .mx-3 {
+    margin: 0 !important;
+  }
+}
+
+.SignIn .alerterror {
+  position: absolute;
+  width: 70%;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #ec0000;
+  color: white;
+}
+.SignIn .form-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+}
+.SignIn .form-card form {
+  width: 64%;
+}
+.SignIn .form-card form .form-control {
+  border: none;
+  padding: 11px 0;
+  border-radius: 0;
+  border-bottom: 2px solid #bfbfbf;
+  margin-top: 30px;
+}
+.SignIn .form-card form .form-control::-moz-placeholder {
+  color: #9e9e9e;
+}
+.SignIn .form-card form .form-control::placeholder {
+  color: #9e9e9e;
+}
+.SignIn .form-card form #submit {
+  background-color: #db4444;
+  border-color: #db4444;
+  font-size: 19px;
+  padding: 9px 37px;
+}
+.SignIn .form-card form .registerBtn {
+  display: block;
+  margin-top: 20px;
+  color: black;
   cursor: pointer;
-  transition: border-color 0.25s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: underline;
 }
-button:hover {
-  border-color: #646cff;
+.SignIn .head {
+  font-size: 33px;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.SignIn .info {
+  font-size: 19px;
+  color: #565656;
+}
+@media (max-width: 1400px) {
+  .SignIn .form-card {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 1400px) {
+  .SignIn .alerterror {
+    width: 98%;
+    font-size: 15px;
+    top: -43px;
+  }
+  .SignIn .form-card form {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .SignIn .row {
+    flex-direction: column-reverse;
+  }
+  .SignIn .img-card {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .SignIn .form-card {
+    padding: 10px;
+  }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+footer {
+  background-color: black;
+  color: white;
+  padding: 51px 10px 18px 10px;
+  margin-top: 70px;
+}
+footer .title {
+  font-size: 22px;
+  font-weight: 700;
+}
+footer .desc {
+  font-size: 18px;
+  color: #a7a7a7;
+}
+footer p {
+  cursor: pointer;
+}
+footer .img-fluid {
+  max-width: 39%;
+}
+footer .play-img {
+  max-width: 55%;
+}
+footer .socials {
+  justify-content: space-evenly;
+}
+footer .footer-card {
+  width: 20%;
+}
+footer form {
+  position: relative;
+}
+footer form .send-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 47px;
+  font-size: 22px;
+  cursor: pointer;
+}
+footer form .form-control {
+  height: 47px;
+  width: 88%;
+  color: white !important;
+  background-color: black;
+}
+footer form .form-control::-moz-placeholder {
+  color: white !important;
+}
+footer form .form-control::placeholder {
+  color: white !important;
+}
+footer form .form-control:focus {
+  background-color: rgba(238, 238, 238, 0.2705882353);
+}
+footer .copy {
+  display: flex;
+  justify-content: space-between;
+}
+footer .copy a {
+  color: #db4444;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (max-width: 992px) {
+  footer .footer-card {
+    width: 100%;
+    margin-bottom: 20px;
   }
-  a:hover {
-    color: #747bff;
+  footer .copy {
+    display: block;
+    text-align: centers;
+    line-height: 2;
   }
-  button {
-    background-color: #f9f9f9;
+  footer form .form-control {
+    width: 100%;
+  }
+  footer form .send-icon {
+    right: 15px;
   }
 }
+
+.HomePage .SideBar {
+  border-right: 1px solid #c4c4c4;
+  padding-top: 38px;
+}
+.HomePage .SideBar .link {
+  display: block;
+  color: #565656;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.HomePage .SideBar .link span {
+  display: inline-block;
+  width: 163px;
+}
+.HomePage .RightSideBar {
+  padding: 45px 5px 10px 40px;
+}
+.HomePage .content {
+  background-color: black;
+  color: white;
+  padding: 41px 20px 41px 73px;
+  justify-content: space-between;
+}
+.HomePage .content .img-fluid {
+  max-width: 50%;
+}
+.HomePage .content .info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.HomePage .content .top-head {
+  font-size: 18px;
+}
+.HomePage .content .top-head .icon {
+  font-size: 75px;
+  margin-right: 10px;
+}
+.HomePage .content .main-head {
+  font-size: 79px;
+  margin-top: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.HomePage .content .main-head span {
+  display: block;
+}
+.HomePage .content .shopbtn {
+  margin-top: 15px;
+  font-size: 23px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.HomePage .content .shopbtn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  background-color: #8f8f8f;
+  left: 0;
+}
+@media (max-width: 1200px) {
+  .HomePage .content {
+    padding: 20px;
+  }
+  .HomePage .content .main-head {
+    font-size: 60px;
+  }
+  .HomePage .SideBar {
+    width: 25%;
+  }
+  .HomePage .SideBar .link {
+    margin-top: 13px;
+    font-size: 17px;
+  }
+  .HomePage .RightSideBar {
+    width: 75%;
+  }
+}
+@media (max-width: 992px) {
+  .HomePage .row {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+  .HomePage .SideBar,
+  .HomePage .RightSideBar {
+    width: 100%;
+  }
+  .HomePage .SideBar {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+  .HomePage .SideBar .link {
+    width: 33.3%;
+  }
+  .HomePage .RightSideBar {
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .HomePage .content {
+    padding: 20px;
+  }
+  .HomePage .content .main-head {
+    font-size: 31px;
+  }
+  .HomePage .content .top-head {
+    font-size: 15px;
+  }
+  .HomePage .content .top-head .icon {
+    font-size: 43px;
+  }
+  .HomePage .content .shopbtn {
+    font-size: 17px;
+  }
+  .HomePage .SideBar .link {
+    width: 50%;
+    margin-top: 19px;
+  }
+  .HomePage .SideBar .link span {
+    width: 155px;
+  }
+}/*# sourceMappingURL=index.css.map */

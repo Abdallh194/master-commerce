@@ -1,0 +1,29 @@
+@import "bootstrap/dist/css/bootstrap.css"; //bootstrap
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+//vars
+$main-font: "Raleway";
+$logo-font: "Pacifico";
+$main-color: #db4444;
+$sec-color: #c4c4c4;
+
+body,
+html {
+  font-family: $main-font !important;
+  font-weight: 400;
+  color: black;
+}
+.cus-dflex {
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 1650px;
+}
+
+@import "styles/Header";
+@import "styles/SignIn";
+@import "styles/Footer";
+@import "styles/HomePage";
