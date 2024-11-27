@@ -1,8 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SideBar from "./SideBar";
 import RightSideBar from "./RightSideBar";
-import ProductCard from "@pages/ProductCard/ProductCard";
-import { Allproducts } from "@constants/constants";
 
 const LandingPage = () => {
   return (
