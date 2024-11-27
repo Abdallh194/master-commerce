@@ -1,23 +1,29 @@
-//bootstrap components
+import { useState, useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-
-import { Link } from "react-router-dom";
-
-// search box component
+import { Link, useLocation } from "react-router-dom";
 import HeaderSearch from "@components/ui/HeaderSearch";
-
-// get links
 import { HeaderLinks } from "src/constants/constants";
 import { useAppSelector } from "@redux/hooks";
-
-//icon
-
 import { LuStore } from "react-icons/lu";
+
 function Header() {
   const { isloggin } = useAppSelector((s) => s.user);
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [location]);
 
   return (
-    <Navbar collapseOnSelect expand="lg">
+    <Navbar
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+    >
       <Container>
         <Navbar.Brand as={Link} to="/" className="logo cus-dflex">
           Exclusive <LuStore className="mx-1" />

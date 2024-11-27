@@ -1,0 +1,130 @@
+.About {
+  .breadcrumb {
+    margin-left: 127px;
+  }
+  .img-card {
+    padding: 0;
+    .img-fluid {
+      height: 100%;
+    }
+  }
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 132px;
+    padding-right: 122px;
+    .head {
+      font-size: 53px;
+      font-weight: 600;
+    }
+    .info {
+      font-size: 18px;
+      color: #404040;
+      font-weight: 500;
+      padding: 10px 0;
+    }
+  }
+  .icon {
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    border-radius: 50%;
+    font-size: 35px;
+    box-shadow: 0px 0px 0px 10px #aaaaaa;
+  }
+  .store-nums {
+    .store-details {
+      width: calc(100% / 4 - 20px);
+      margin: 10px auto;
+      border: 1px solid #aaaaaa;
+      border-radius: 4px;
+      text-align: center;
+      padding: 20px;
+
+      .num {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: system-ui;
+      }
+    }
+    .active {
+      background-color: $main-color;
+      color: white;
+      border: none;
+      .icon {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 0px 0px 10px #d7d7d785;
+      }
+    }
+  }
+  .store-nums,
+  .employee,
+  .foot-card {
+    flex-wrap: wrap;
+    margin-top: 125px;
+  }
+  .employee-card {
+    width: calc(100% / 3 - 40px);
+    margin: 20px auto;
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .socials {
+      font-size: 19px;
+    }
+  }
+  .foot-card {
+    justify-content: center;
+    .footer-card {
+      width: 29%;
+      text-align: center;
+      .title {
+        font-size: 23px;
+        font-weight: 700;
+        margin-top: 26px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .breadcrumb {
+      margin-left: 0;
+    }
+    .info-card {
+      padding: 0px 20px 35px 13px;
+      margin-top: -20px;
+      .head {
+        font-size: 40px;
+      }
+      .info {
+        font-size: 17px;
+        padding: 6px 0;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .store-nums {
+      .store-details {
+        width: 48%;
+      }
+    }
+    .store-nums,
+    .employee,
+    .foot-card {
+      margin-top: 50px;
+    }
+    .employee-card,
+    .foot-card .footer-card {
+      width: 78%;
+    }
+    .foot-card {
+      .footer-card {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

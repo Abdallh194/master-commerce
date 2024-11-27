@@ -1,4 +1,5 @@
-@import "bootstrap/dist/css/bootstrap.css"; //bootstrap
+@import "bootstrap/dist/css/bootstrap.min.css";
+//bootstrap
 
 //fonts
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
@@ -22,8 +23,20 @@ html {
 .container {
   max-width: 1650px;
 }
-
+.breadcrumb {
+  margin: 50px 0;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .active {
+    font-weight: 700;
+  }
+}
 @import "styles/Header";
 @import "styles/SignIn";
 @import "styles/Footer";
 @import "styles/HomePage";
+@import "styles/Contact";
+@import "styles/About";
+@import "styles/ProductCard";

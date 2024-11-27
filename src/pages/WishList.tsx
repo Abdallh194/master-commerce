@@ -1,5 +1,11 @@
+import Breadcrumbs from "@components/Breadcrumb";
+
 const WishList = () => {
-  return <div>WishList</div>;
+  return (
+    <div>
+      <Breadcrumbs />
+    </div>
+  );
 };
 
 export default WishList;

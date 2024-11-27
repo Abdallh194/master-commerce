@@ -1,0 +1,15 @@
+.ProductCard {
+  width: calc(100% / 5 - 20px);
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 20px;
+  .top-menu {
+    justify-content: space-between;
+    .discount {
+      background-color: $main-color;
+      color: white;
+      padding: 2px 13px;
+    }
+  }
+}

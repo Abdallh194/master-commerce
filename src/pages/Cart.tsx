@@ -1,5 +1,11 @@
+import Breadcrumbs from "@components/Breadcrumb";
+
 const Cart = () => {
-  return <div>Cart</div>;
+  return (
+    <div>
+      <Breadcrumbs />
+    </div>
+  );
 };
 
 export default Cart;

@@ -1,4 +1,4 @@
-@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 body,
 html {
@@ -14,6 +14,17 @@ html {
 
 .container {
   max-width: 1650px;
+}
+
+.breadcrumb {
+  margin: 50px 0;
+}
+.breadcrumb a {
+  color: black;
+  text-decoration: none;
+}
+.breadcrumb .active {
+  font-weight: 700;
 }
 
 .navbar {
@@ -104,6 +115,9 @@ html {
   }
   .navbar .mx-3 {
     margin: 0 !important;
+  }
+  .navbar .dropdown-menu {
+    left: -5px;
   }
 }
 
@@ -405,4 +419,220 @@ footer .copy a {
   .HomePage .SideBar .link span {
     width: 155px;
   }
+}
+
+.Contact .form-card,
+.Contact .info-card {
+  box-shadow: 0px 0px 5px 1px #eee;
+  padding: 45px;
+}
+.Contact .info-card .log {
+  font-size: 17px;
+  font-weight: 600;
+}
+.Contact .info-card .icon {
+  background-color: #db4444;
+  color: white;
+  font-size: 21px;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.Contact .info-card .info {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(51, 51, 51);
+}
+.Contact .form-card {
+  width: 73%;
+  margin-left: 2%;
+}
+.Contact .form-card form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Contact .form-card .form-control {
+  width: 32%;
+  margin: 10px auto;
+  height: 50px;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 0;
+}
+.Contact .form-card #msg {
+  width: 98.7%;
+  height: 200px;
+  margin-top: 17px;
+  resize: none;
+}
+.Contact .form-card .btn {
+  background-color: #db4444;
+  color: white;
+  font-size: 19px;
+  padding: 9px 37px;
+  border: none;
+  margin: 19px 0px 0px 6px;
+}
+@media (max-width: 992px) {
+  .Contact .form-card,
+  .Contact .info-card {
+    width: 94%;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .Contact .form-card,
+  .Contact .info-card {
+    padding: 16px;
+  }
+  .Contact .form-card .form-control {
+    width: 100%;
+  }
+  .Contact .form-card {
+    margin-top: 30px;
+  }
+}
+
+.About .breadcrumb {
+  margin-left: 127px;
+}
+.About .img-card {
+  padding: 0;
+}
+.About .img-card .img-fluid {
+  height: 100%;
+}
+.About .info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 132px;
+  padding-right: 122px;
+}
+.About .info-card .head {
+  font-size: 53px;
+  font-weight: 600;
+}
+.About .info-card .info {
+  font-size: 18px;
+  color: #404040;
+  font-weight: 500;
+  padding: 10px 0;
+}
+.About .icon {
+  background-color: black;
+  color: white;
+  width: 60px;
+  height: 60px;
+  margin: 20px auto;
+  border-radius: 50%;
+  font-size: 35px;
+  box-shadow: 0px 0px 0px 10px #aaaaaa;
+}
+.About .store-nums .store-details {
+  width: calc(25% - 20px);
+  margin: 10px auto;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+}
+.About .store-nums .store-details .num {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: system-ui;
+}
+.About .store-nums .active {
+  background-color: #db4444;
+  color: white;
+  border: none;
+}
+.About .store-nums .active .icon {
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 0px 10px rgba(215, 215, 215, 0.5215686275);
+}
+.About .store-nums,
+.About .employee,
+.About .foot-card {
+  flex-wrap: wrap;
+  margin-top: 125px;
+}
+.About .employee-card {
+  width: calc(33.3333333333% - 40px);
+  margin: 20px auto;
+}
+.About .employee-card .title {
+  font-size: 32px;
+  font-weight: 700;
+}
+.About .employee-card .socials {
+  font-size: 19px;
+}
+.About .foot-card {
+  justify-content: center;
+}
+.About .foot-card .footer-card {
+  width: 29%;
+  text-align: center;
+}
+.About .foot-card .footer-card .title {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 26px;
+}
+@media (max-width: 1200px) {
+  .About .breadcrumb {
+    margin-left: 0;
+  }
+  .About .info-card {
+    padding: 0px 20px 35px 13px;
+    margin-top: -20px;
+  }
+  .About .info-card .head {
+    font-size: 40px;
+  }
+  .About .info-card .info {
+    font-size: 17px;
+    padding: 6px 0;
+  }
+}
+@media (max-width: 992px) {
+  .About .store-nums .store-details {
+    width: 48%;
+  }
+  .About .store-nums,
+  .About .employee,
+  .About .foot-card {
+    margin-top: 50px;
+  }
+  .About .employee-card,
+  .About .foot-card .footer-card {
+    width: 78%;
+  }
+  .About .foot-card .footer-card {
+    margin-bottom: 30px;
+  }
+}
+
+.ProductCard {
+  width: calc(20% - 20px);
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+.ProductCard .top-menu {
+  justify-content: space-between;
+}
+.ProductCard .top-menu .discount {
+  background-color: #db4444;
+  color: white;
+  padding: 2px 13px;
 }/*# sourceMappingURL=index.css.map */
