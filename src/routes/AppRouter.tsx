@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
-import LandingPage from "@components/LandingPage";
+import LandingPage from "@pages/ProductCard/LandingPage";
 import About from "@pages/About/About";
 import Contact from "@pages/Contact/Contact";
 import Login from "@pages/auth/Login";
@@ -9,14 +9,19 @@ import WishList from "@pages/WishList";
 import UserProfile from "@pages/auth/UserProfile";
 import ProtectedRoute from "./ProtectedRoute";
 import ErrorBoundary from "src/Error/ErrorBoundary";
+import ProtectLogin from "./ProtectLogin";
+import { Suspense } from "react";
+import Loader from "@components/Loader/Loader";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ErrorBoundary>
-        <MainLayout />
-      </ErrorBoundary>
+      <Suspense fallback={<Loader />}>
+        <ErrorBoundary>
+          <MainLayout />
+        </ErrorBoundary>
+      </Suspense>
     ),
 
     children: [
@@ -34,7 +39,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: (
+          <ProtectLogin>
+            <Login />
+          </ProtectLogin>
+        ),
       },
       {
         path: "/cart",

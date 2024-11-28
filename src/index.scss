@@ -33,6 +33,14 @@ html {
     font-weight: 700;
   }
 }
+.loader {
+  width: 365px;
+  position: absolute;
+  height: 99%;
+  left: 50%;
+  top: 450px;
+  transform: translateX(-50%) translateY(-50%);
+}
 @import "styles/Header";
 @import "styles/SignIn";
 @import "styles/Footer";

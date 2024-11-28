@@ -1,6 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
-import SideBar from "./SideBar";
-import RightSideBar from "./RightSideBar";
+import SideBar from "../../components/SideBar";
+import RightSideBar from "../../components/RightSideBar";
+
+import { Allproducts } from "@constants/constants";
+import ProductCard from "../../components/ProductCard";
 
 const LandingPage = () => {
   return (
@@ -15,7 +18,10 @@ const LandingPage = () => {
               <RightSideBar />
             </Col>
           </Row>
-          <Row>{/* <ProductCard products={Allproducts} /> */}</Row>
+          <div className="flash-sels">
+            <div className="title">Flash Seles</div>
+          </div>
+          <ProductCard products={Allproducts} />
         </Container>
       </div>
     </>

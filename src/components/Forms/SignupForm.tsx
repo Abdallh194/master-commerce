@@ -3,7 +3,11 @@ import { useState } from "react";
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ActiveUserState, ValidateEmailAddress } from "@redux/user/LoginSlice";
+import {
+  ActiveUserState,
+  AddNewUser,
+  ValidateEmailAddress,
+} from "@redux/user/LoginSlice";
 import { useNavigate } from "react-router-dom";
 import { SigupSchema, SignupType } from "@validation/SignupValidation";
 import { useAppDispatch, useAppSelector } from "@redux/hooks";
@@ -41,6 +45,12 @@ const SignupForm: React.FC<TFun> = ({ setDefualtView }) => {
     setIsLoading(true);
     setTimeout(() => {
       if (data) {
+        const Data = {
+          Email: data.email,
+          Password: data.password,
+          FirstName: data.name,
+        };
+        dispatch(AddNewUser(Data));
         dispatch(ActiveUserState());
         setisLoginError(false);
         navigate("/user-profile");
