@@ -23,6 +23,7 @@ export interface IProductsState {
   }[];
   loading: "pending" | "succeeded" | "failed";
   error: string | null;
+
   confirmOrder: boolean;
 }
 const initialState: IProductsState = {

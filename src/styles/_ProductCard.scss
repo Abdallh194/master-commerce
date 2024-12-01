@@ -14,6 +14,14 @@
   border: 1px solid #d6d6d6;
   text-align: center;
   border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+  &:hover {
+    .addtocart {
+      bottom: 0;
+    }
+  }
 }
 .button {
   position: absolute;
@@ -24,6 +32,15 @@
   border: none;
   padding: 10px;
   cursor: pointer;
+}
+.qty {
+  position: absolute;
+  top: 54px;
+  font-weight: 600;
+  color: #cbab00;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: system-ui;
 }
 .img-container {
   height: 300px;
@@ -40,15 +57,100 @@
 .price {
   color: $main-color;
   font-size: 20px;
+  font-weight: 600;
+  font-family: system-ui;
   span {
     margin-left: 20px;
     text-decoration: line-through;
     color: rgb(63, 63, 63);
   }
 }
+.top-menu {
+  justify-content: space-between;
+  align-items: center;
+  .discount {
+    background-color: $main-color;
+    color: white;
+    padding: 2px 18px;
+    font-family: system-ui;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+}
+.addtocart {
+  background-color: $main-color;
+  color: white;
+  position: absolute;
+  transition: 0.4s;
+  border-radius: 0;
+  width: 100%;
+  left: 0;
+  bottom: -40px;
+  padding: 6px;
+  border: none;
+  &:hover {
+    background-color: $main-color;
+  }
+}
+.MuiPaper-root {
+  position: fixed;
+  bottom: 2%;
+  z-index: 1000;
+  left: 1%;
+}
+.btns {
+  position: absolute;
+  width: 123px;
+  right: 0;
+  top: -17px;
+  font-size: 23px;
+}
+.left,
+.right {
+  background-color: $main-color;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 0;
+}
 .left {
   left: 10px;
 }
 .right {
   right: 10px;
+}
+@media (max-width: 1400px) {
+  .product {
+    width: 23%;
+  }
+}
+@media (max-width: 992px) {
+  .product {
+    width: 50%;
+    overflow: visible;
+  }
+  .addtocart {
+    bottom: -1px;
+  }
+  .Products-container {
+    margin-top: 54px;
+    padding: 20px 0;
+  }
+  .product-name {
+    font-size: 18px;
+  }
+  .MuiRating-root {
+    font-size: 25px !important;
+    padding: 0px 20px;
+  }
+  .img-container {
+    height: 224px;
+    margin-top: 0;
+  }
+  .top-menu {
+    .discount {
+      font-size: 13px;
+    }
+  }
 }

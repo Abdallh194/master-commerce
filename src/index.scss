@@ -41,6 +41,27 @@ html {
   top: 450px;
   transform: translateX(-50%) translateY(-50%);
 }
+.sale-type {
+  color: $main-color;
+  top: 120px;
+  left: 36px;
+  font-weight: 800;
+  width: fit-content;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 60px;
+    left: -36px;
+    border-radius: 5px;
+    top: -17px;
+    background-color: $main-color;
+  }
+  @media (max-width: 992px) {
+    top: 64px;
+  }
+}
 @import "styles/Header";
 @import "styles/SignIn";
 @import "styles/Footer";

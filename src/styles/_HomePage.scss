@@ -68,6 +68,40 @@
       }
     }
   }
+  //timer
+  .flash-sels {
+    margin-top: 155px;
+    display: flex;
+    align-items: center;
+    .title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-right: 50px;
+    }
+    .timer {
+      .date {
+        position: relative;
+      }
+      .name {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .num {
+        margin: 0px 21px;
+        font-size: 31px;
+        font-weight: 700;
+        font-family: system-ui;
+      }
+      .dot {
+        font-size: 31px;
+        color: #db4444;
+        font-weight: 900;
+        display: inline-block;
+      }
+    }
+  }
   @media (max-width: 1200px) {
     .content {
       padding: 20px;
@@ -106,7 +140,15 @@
     .RightSideBar {
       padding: 10px;
     }
+    .flash-sels {
+      display: block;
+      margin-top: 113px;
+      .timer {
+        margin-top: 25px;
+      }
+    }
   }
+
   @media (max-width: 767px) {
     .content {
       padding: 20px;
