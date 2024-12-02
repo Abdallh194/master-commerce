@@ -8,6 +8,7 @@ const useProducts = () => {
 
   // hide alert successAddCart
   const [successAddCart, setSuccessAddCart] = useState(false);
+  const [SuccessAddwishlist, setSuccessAddwishlist] = useState(false);
   useEffect(() => {
     if (successAddCart) {
       const timer = setTimeout(() => {
@@ -20,6 +21,14 @@ const useProducts = () => {
     setSuccessAddCart(true);
   };
 
+  useEffect(() => {
+    if (SuccessAddwishlist) {
+      const timer = setTimeout(() => {
+        setSuccessAddwishlist(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [SuccessAddwishlist]);
   //leading effect
   useEffect(() => {
     if (!isDisabled) {
@@ -59,6 +68,8 @@ const useProducts = () => {
     setSuccessAddCart,
     handleAddToCart,
     successAddCart,
+    SuccessAddwishlist,
+    setSuccessAddwishlist,
   };
 };
 

@@ -102,6 +102,15 @@
       }
     }
   }
+  @media (max-width: 1400px) {
+    .SideBar {
+      .link {
+        span {
+          width: 150px;
+        }
+      }
+    }
+  }
   @media (max-width: 1200px) {
     .content {
       padding: 20px;

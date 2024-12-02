@@ -1,10 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap";
-import SideBar from "../../components/SideBar";
-import RightSideBar from "../../components/RightSideBar";
+import SideBar from "../components/SideBar";
+import RightSideBar from "../components/RightSideBar";
 
 import { Allproducts } from "@constants/constants";
-import ProductCard from "../../components/ProductCard/ProductCard";
-import CountdownTimer from "../../components/ui/CountdownTimer";
+import ProductCard from "../components/ProductCard/ProductCard";
+import CountdownTimer from "../components/ui/CountdownTimer";
 
 const LandingPage = () => {
   return (
@@ -24,7 +24,7 @@ const LandingPage = () => {
             <div className="title">Flash Seles</div>
             <CountdownTimer />
           </div>
-          <ProductCard products={Allproducts} />
+          <ProductCard products={Allproducts} isfav={false} />
         </Container>
       </div>
     </>

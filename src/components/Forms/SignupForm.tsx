@@ -44,7 +44,7 @@ const SignupForm: React.FC<TFun> = ({ setDefualtView }) => {
   const SubmitForm: SubmitHandler<SignupType> = (data) => {
     setIsLoading(true);
     setTimeout(() => {
-      if (data) {
+      if (data && exsitEmail == false) {
         const Data = {
           Email: data.email,
           Password: data.password,
@@ -129,7 +129,7 @@ const SignupForm: React.FC<TFun> = ({ setDefualtView }) => {
         </div>
         {isLoginError && (
           <Alert variant="danger" className="alerterror">
-            You have entered an invalid username or password <MdDangerous />
+            You have entered an invalid Details <MdDangerous />
           </Alert>
         )}
       </Form>

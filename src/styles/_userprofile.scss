@@ -1,0 +1,9 @@
+.user-profile {
+  position: relative;
+  .wecome-msg {
+    span {
+      color: $main-color;
+      font-weight: 600;
+    }
+  }
+}

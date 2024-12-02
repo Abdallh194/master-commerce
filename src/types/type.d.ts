@@ -7,7 +7,18 @@ declare interface Product {
   Quantity: number;
   max: number;
   discount: string;
+  category: string;
 }
 declare interface ProductListProps {
   products: Product[];
+  isfav: boolean;
+}
+
+declare interface ProductQty {
+  Product: Product;
+  setLoading: (...args: boolean[]) => void;
+}
+declare interface ProductId {
+  id: string;
+  setLoading: (...args: boolean[]) => void;
 }

@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const MainLayout = lazy(() => import("@layout/MainLayout"));
-import LandingPage from "@pages/ProductCard/LandingPage";
+import LandingPage from "@pages/LandingPage";
 import About from "@pages/About/About";
 import Contact from "@pages/Contact/Contact";
 import Login from "@pages/auth/Login";
-import Cart from "@pages/Cart";
+import Cart from "@pages/Cart/Cart";
 import WishList from "@pages/WishList";
 import UserProfile from "@pages/auth/UserProfile";
 import ProtectedRoute from "./ProtectedRoute";

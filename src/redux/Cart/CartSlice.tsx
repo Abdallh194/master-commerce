@@ -9,6 +9,7 @@ export interface IProductsState {
     cat_prefix: string;
     Quantity: number;
     discount: string;
+    category: string;
     max: number;
   }[];
   FavItem: {
@@ -20,6 +21,7 @@ export interface IProductsState {
     Quantity: number;
     discount: string;
     max: number;
+    category: string;
   }[];
   loading: "pending" | "succeeded" | "failed";
   error: string | null;
@@ -51,8 +53,25 @@ const productsSlice = createSlice({
         state.CartItem.push(action.payload);
       }
     },
+    IncreaseQty: (state, action) => {
+      state.CartItem.forEach((p) => {
+        if (p.id == action.payload) {
+          p.Quantity += 1;
+        }
+      });
+    },
+    DecreaseQty: (state, action) => {
+      state.CartItem.forEach((p) => {
+        if (p.id == action.payload) {
+          p.Quantity -= 1;
+        }
+      });
+    },
     DeleteItemFromCard: (state, action) => {
       state.CartItem = state.CartItem.filter((e) => e.id !== action.payload);
+    },
+    DeleteItemFromWishlist: (state, action) => {
+      state.FavItem = state.FavItem.filter((e) => e.id !== action.payload);
     },
     AddItemToFavList: (state, action) => {
       let isexist = false;
@@ -81,5 +100,8 @@ export const {
   AddItemToFavList,
   ConfirmOrderClearCartItem,
   ResetConfirmOrderFunctionality,
+  IncreaseQty,
+  DecreaseQty,
+  DeleteItemFromWishlist,
 } = productsSlice.actions;
 export default productsSlice.reducer;

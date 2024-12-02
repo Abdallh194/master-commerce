@@ -34,13 +34,10 @@
   cursor: pointer;
 }
 .qty {
-  position: absolute;
-  top: 54px;
-  font-weight: 600;
-  color: #cbab00;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  color: rgb(165, 118, 0);
   font-family: system-ui;
+  font-weight: 600;
 }
 .img-container {
   height: 300px;
@@ -152,5 +149,8 @@
     .discount {
       font-size: 13px;
     }
+  }
+  .MuiPaper-root {
+    width: 98%;
   }
 }

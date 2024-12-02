@@ -61,6 +61,18 @@ html {
   }
 }
 
+.empty-cart {
+  width: 390px;
+  margin: auto;
+  text-align: center;
+}
+.empty-cart p {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
 .navbar {
   position: relative;
   padding: 25px 5px;
@@ -422,6 +434,11 @@ footer .copy a {
   font-weight: 900;
   display: inline-block;
 }
+@media (max-width: 1400px) {
+  .HomePage .SideBar .link span {
+    width: 150px;
+  }
+}
 @media (max-width: 1200px) {
   .HomePage .content {
     padding: 20px;
@@ -730,13 +747,10 @@ footer .copy a {
 }
 
 .qty {
-  position: absolute;
-  top: 54px;
-  font-weight: 600;
-  color: #cbab00;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  color: rgb(165, 118, 0);
   font-family: system-ui;
+  font-weight: 600;
 }
 
 .img-container {
@@ -858,4 +872,174 @@ footer .copy a {
   .top-menu .discount {
     font-size: 13px;
   }
+  .MuiPaper-root {
+    width: 98%;
+  }
+}
+.cart .row-container {
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 9px 0px #eaeaea;
+}
+.cart .row-container {
+  display: flex;
+  color: black;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+.cart .row-container .loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(197, 197, 197, 0.6392156863);
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart .row-container .img-fluid {
+  max-width: 60px;
+  height: 75px;
+}
+.cart .row-container .item {
+  font-size: 19px;
+  font-weight: 500;
+}
+.cart .row-container .product-price {
+  font-family: system-ui;
+}
+.cart .row-container .dlt {
+  color: red;
+  cursor: pointer;
+}
+.cart .row-container .product-qty {
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.cart .row-container .decrease,
+.cart .row-container .increase {
+  cursor: pointer;
+}
+.cart .row-container .disable-btn {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+.cart .cart-header {
+  font-weight: 600;
+}
+.cart .g-btn {
+  width: 180px;
+  background-color: #db4444;
+  color: white;
+}
+.cart .form {
+  align-items: center;
+}
+.cart .form .form-control,
+.cart .form .btn {
+  height: 50px;
+  border-radius: 0;
+}
+.cart .form .form-control {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.cart .form .btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  line-height: 2.2;
+}
+.cart .back-shop {
+  font-size: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.6117647059);
+  padding: 10px 49px;
+  font-weight: 600;
+}
+.cart .head {
+  font-size: 25px;
+  font-weight: 700;
+  color: #db4444;
+}
+.cart .bill-head {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3f3f3f;
+  font-family: system-ui;
+}
+.cart .total-info {
+  padding-left: 30px;
+  position: relative;
+}
+.cart .coupon-info {
+  position: relative;
+}
+.cart .coupon-info::before {
+  position: absolute;
+  content: "";
+  right: -17px;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background-color: rgba(238, 238, 238, 0.7098039216);
+}
+.cart .checkout-btn {
+  padding: 10px;
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+@media (max-width: 992px) {
+  .cart .row-container .item {
+    font-size: 15px;
+  }
+  .cart .coupon-info::before {
+    display: none;
+  }
+  .cart .total-info {
+    padding-left: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .cart .row-container {
+    font-size: 13px;
+  }
+  .cart .row-container .img-fluid {
+    max-width: 50px;
+    height: 50px;
+  }
+  .cart .headers {
+    width: 20%;
+  }
+  .cart .d-none-mobileView {
+    display: none;
+  }
+}
+
+.Wishlist .fav-dlt {
+  color: red;
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+  font-size: 18px;
+}
+@media (max-width: 992px) {
+  .Wishlist .product {
+    margin: 10px auto;
+    width: 48%;
+  }
+  .Wishlist .img-container {
+    margin-top: 12px;
+  }
+}
+
+.user-profile {
+  position: relative;
+}
+.user-profile .wecome-msg span {
+  color: #db4444;
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */
