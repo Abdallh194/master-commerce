@@ -7,6 +7,7 @@ export interface IProductsState {
     Phone: string;
     Email: string;
     Password: string;
+    Address: string;
   };
   exsitEmail: boolean;
   DefaultUserEmail: string;
@@ -21,11 +22,12 @@ const initialState: IProductsState = {
     Phone: "01091415560",
     Email: "Ahmeddel400@gmail.com",
     Password: "12345678@",
+    Address: "Tanta",
   },
   DefaultUserEmail: "abdallhsabry194@gmail.com",
   DefaultUserPassword: "12345678@",
   exsitEmail: false,
-  isloggin: false,
+  isloggin: true,
   isToCheckout: false,
 };
 const loginSlice = createSlice({

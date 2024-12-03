@@ -1042,4 +1042,136 @@ footer .copy a {
 .user-profile .wecome-msg span {
   color: #db4444;
   font-weight: 600;
+}
+.user-profile .row {
+  margin-top: 20px;
+}
+.user-profile .tab-head {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.user-profile .tab-menu {
+  margin: 20px;
+}
+.user-profile .tab-menu .link {
+  color: rgb(44, 44, 44);
+  margin: 13px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.user-profile .head {
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #db4444;
+}
+.user-profile .g-btn {
+  background-color: #db4444;
+  color: white;
+  width: 245px;
+  margin: 20px;
+  border-radius: 0;
+  font-size: 19px;
+}
+.user-profile .cancel-btn {
+  color: #db4444;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.user-profile form {
+  position: relative;
+  box-shadow: 0px 0px 11px 1px rgba(220, 220, 220, 0.3882352941);
+  padding: 30px;
+}
+.user-profile form .alerterror {
+  position: absolute;
+  top: -50px;
+  left: 1%;
+  width: 98%;
+}
+.user-profile form label {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.user-profile form .w-50 {
+  width: 46% !important;
+  margin: 10px auto;
+}
+.user-profile form .form-control {
+  height: 50px;
+  border: none;
+  border-radius: 0px;
+  background-color: #f1f1f1;
+}
+.user-profile form .w-100 {
+  width: 96% !important;
+  margin: 10px auto;
+}
+.user-profile .LeftSide {
+  position: relative;
+}
+.user-profile .LeftSide::after {
+  position: absolute;
+  content: "";
+  right: 40px;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  background-color: #c4c4c4;
+}
+.user-profile .info-head {
+  font-size: 25px;
+  font-weight: 600;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.user-profile .info-head::before {
+  position: absolute;
+  content: "";
+  background-color: #db4444;
+  height: 2px;
+  width: 36%;
+  left: 0;
+  bottom: 0px;
+}
+.user-profile .details-head {
+  font-size: 20px;
+  font-weight: 700;
+}
+.user-profile .details-desc {
+  color: #5a5a5a;
+  font-family: system-ui;
+}
+.user-profile .edit {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #db4444;
+  font-size: 18px;
+  margin-top: 18px;
+  font-weight: 500;
+}
+@media (max-width: 992px) {
+  .user-profile .row {
+    flex-direction: column-reverse;
+  }
+  .user-profile .details-head {
+    margin-top: 13px;
+  }
+  .user-profile .LeftSide::before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .user-profile form .w-50,
+  .user-profile form .w-100 {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=index.css.map */

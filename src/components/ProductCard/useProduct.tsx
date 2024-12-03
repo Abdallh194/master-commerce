@@ -17,6 +17,7 @@ const useProducts = () => {
       return () => clearTimeout(timer);
     }
   }, [successAddCart]);
+
   const handleAddToCart = () => {
     setSuccessAddCart(true);
   };
@@ -29,17 +30,15 @@ const useProducts = () => {
       return () => clearTimeout(timer);
     }
   }, [SuccessAddwishlist]);
-  //leading effect
+
   useEffect(() => {
-    if (!isDisabled) {
-      return;
-    }
-    setisDisabled(true);
-    setSuccessAddCart(false);
-    const debounce = setInterval(() => {
+    if (!isDisabled) return;
+
+    const debounce = setTimeout(() => {
       setisDisabled(false);
       setSuccessAddCart(true);
     }, 300);
+
     return () => clearTimeout(debounce);
   }, [isDisabled]);
 

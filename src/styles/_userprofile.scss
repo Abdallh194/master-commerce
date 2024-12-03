@@ -6,4 +6,138 @@
       font-weight: 600;
     }
   }
+  .row {
+    margin-top: 20px;
+  }
+  .tab-head {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .tab-menu {
+    margin: 20px;
+    .link {
+      color: rgb(44, 44, 44);
+      margin: 13px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  .head {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: $main-color;
+  }
+  .g-btn {
+    background-color: $main-color;
+    color: white;
+    width: 245px;
+    margin: 20px;
+    border-radius: 0;
+    font-size: 19px;
+  }
+  .cancel-btn {
+    color: $main-color;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  form {
+    position: relative;
+
+    box-shadow: 0px 0px 11px 1px #dcdcdc63;
+    padding: 30px;
+    .alerterror {
+      position: absolute;
+      top: -50px;
+      left: 1%;
+      width: 98%;
+    }
+    label {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .w-50 {
+      width: 46% !important;
+      margin: 10px auto;
+    }
+    .form-control {
+      height: 50px;
+      border: none;
+      border-radius: 0px;
+      background-color: #f1f1f1;
+    }
+    .w-100 {
+      width: 96% !important;
+      margin: 10px auto;
+    }
+  }
+  //LeftSide
+  .LeftSide {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 40px;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      background-color: $sec-color;
+    }
+  }
+  //innfo
+  .info-head {
+    font-size: 25px;
+    font-weight: 600;
+    width: fit-content;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $main-color;
+      height: 2px;
+      width: 36%;
+      left: 0;
+      bottom: 0px;
+    }
+  }
+  .details-head {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .details-desc {
+    color: #5a5a5a;
+    font-family: system-ui;
+  }
+  .edit {
+    cursor: pointer;
+    text-decoration: underline;
+    color: $main-color;
+    font-size: 18px;
+    margin-top: 18px;
+    font-weight: 500;
+  }
+  @media (max-width: 992px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .details-head {
+      margin-top: 13px;
+    }
+    .LeftSide {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    form {
+      .w-50,
+      .w-100 {
+        width: 100% !important;
+      }
+    }
+  }
 }

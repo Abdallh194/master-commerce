@@ -1,13 +1,13 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const MainLayout = lazy(() => import("@layout/MainLayout"));
+const UserProfile = lazy(() => import("@pages/auth/UserProfile"));
 import LandingPage from "@pages/LandingPage";
 import About from "@pages/About/About";
 import Contact from "@pages/Contact/Contact";
 import Login from "@pages/auth/Login";
 import Cart from "@pages/Cart/Cart";
 import WishList from "@pages/WishList";
-import UserProfile from "@pages/auth/UserProfile";
 import ProtectedRoute from "./ProtectedRoute";
 import ErrorBoundary from "src/Error/ErrorBoundary";
 import ProtectLogin from "./ProtectLogin";
@@ -57,9 +57,11 @@ const routes = createBrowserRouter([
       {
         path: "/user-profile",
         element: (
-          <ProtectedRoute>
-            <UserProfile />
-          </ProtectedRoute>
+          <Suspense fallback={<Loader />}>
+            <ProtectedRoute>
+              <UserProfile />
+            </ProtectedRoute>
+          </Suspense>
         ),
       },
     ],

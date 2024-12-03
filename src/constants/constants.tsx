@@ -14,6 +14,10 @@ import {
   FaShoppingCart,
   FaHeart,
   FaCar,
+  FaUser,
+  FaAddressBook,
+  FaCreditCard,
+  FaUndo,
 } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { GrBasket } from "react-icons/gr";
@@ -51,6 +55,27 @@ export const CartHeaders = [
   { title: "Quantity", class: "headers" },
   { title: "Price", class: "headers" },
   { title: "Delete", class: "headers" },
+];
+export const UserProfile_links = [
+  {
+    category: "Manage My Account",
+    items: [
+      { name: "My Profile", icon: <FaUser /> },
+      { name: "Address Book", icon: <FaAddressBook /> },
+      { name: "My Payment Options", icon: <FaCreditCard /> },
+    ],
+  },
+  {
+    category: "My Orders",
+    items: [
+      { name: "My Returns", icon: <FaUndo /> },
+      { name: "My Cancellations", icon: <FaBan /> },
+    ],
+  },
+  {
+    category: "My WishList",
+    items: [{ name: "My WishList", icon: <FaHeart /> }],
+  },
 ];
 export const HeaderLinks = [
   { label: "Home", to: "/" },
